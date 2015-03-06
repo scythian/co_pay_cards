@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Update hooks - enable modules, etc.
+ */
+
+/**
+ * Set default cache time to 7 days.
+ */
+function co_pay_cards_update_7001() {
+  variable_set('co_pay_cards_data_ttl', 604800);
+}

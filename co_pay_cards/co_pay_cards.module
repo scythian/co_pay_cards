@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Code for the Co Pay Cards module.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function co_pay_cards_menu() {
+  $items = array();
+
+  $items['co_pay_cards/widget/%'] = array(
+    'page callback' => 'co_pay_cards_widget',
+    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'file' => 'co_pay_cards.pages.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['co_pay_cards/libraries/%'] = array(
+    'page callback' => 'co_pay_cards_libraries',
+    'page arguments' => array(2),
+    'access callback' => TRUE,
+    'file' => 'co_pay_cards.pages.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}

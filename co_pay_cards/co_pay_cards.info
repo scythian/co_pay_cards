@@ -1,0 +1,6 @@
+name = Co Pay Cards
+project = co_pay_cards
+description = Provides Co Pay Cards functionality.
+core = 7.x
+package = pfizer
+version = 7.x-1.0
