@@ -8,8 +8,8 @@
   var $baseJQuery = false
     , clientID = '#clientID'
     , baseHost = '//#baseHost'
-    , jsLibrariesPack = baseHost + '/co_pay_cards/libraries/js'
-    , cssLibrariesPack = baseHost + '/co_pay_cards/libraries/css'
+    , jsLibrariesPack = baseHost + '/co-pay-cards/libraries/js'
+    , cssLibrariesPack = baseHost + '/co-pay-cards/libraries/css'
     , popupDialogID = 'co-pay-card-dialog'
     , $popupDialog = false
     , iframeURL = '//blinkreaction.com'

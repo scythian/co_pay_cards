@@ -11,7 +11,7 @@
 function co_pay_cards_menu() {
   $items = array();
 
-  $items['co_pay_cards/widget/%'] = array(
+  $items['co-pay-cards/widget/%'] = array(
     'page callback' => 'co_pay_cards_widget',
     'page arguments' => array(2),
     'access callback' => TRUE,
@@ -19,7 +19,7 @@ function co_pay_cards_menu() {
     'type' => MENU_CALLBACK,
   );
 
-  $items['co_pay_cards/libraries/%'] = array(
+  $items['co-pay-cards/libraries/%'] = array(
     'page callback' => 'co_pay_cards_libraries',
     'page arguments' => array(2),
     'access callback' => TRUE,

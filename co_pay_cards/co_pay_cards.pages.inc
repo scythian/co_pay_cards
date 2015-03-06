@@ -28,10 +28,10 @@ function co_pay_cards_widget($file_name = '') {
 
   // Check for correct JS filename, containing integer Client ID and grab it.
   if (preg_match('/(^[0-9]+)\.js$/u', $file_name, $matches)) {
-    $clinent_id = $matches[1];
+    $client_id = $matches[1];
 
     // Check that Client ID exist in DB.
-    if (!co_pay_cards_check_client_id($clinent_id)) {
+    if (!co_pay_cards_check_client_id($client_id)) {
       $error_message = t('Unknown Client ID.');
     }
   }
@@ -56,7 +56,7 @@ function co_pay_cards_widget($file_name = '') {
     '#baseHost',
   );
   $replace = array(
-    $clinent_id,
+    $client_id,
     $error_message,
     $_SERVER['HTTP_HOST'],
   );
@@ -120,7 +120,7 @@ function co_pay_cards_libraries($type) {
 
       $libraries_cache = cache_get('co_pay_cards:css_libraries');
       // If cache does not exist, load needed libraries.
-      if (!isset($libraries_cache->data)) {
+      if (!isset($libraries_cache->data) || TRUE) {
         $libraries_list = array(
           '/misc/ui/jquery.ui.core.css',
           '/misc/ui/jquery.ui.dialog.css',
